@@ -39,7 +39,7 @@ from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
-from websocket import BinanceSocketManager
+import websocket as BinanceSocketManager
 #from binance.streams import BinanceSocketManager
 from twisted.internet import reactor
 
