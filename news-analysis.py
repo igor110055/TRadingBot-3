@@ -68,6 +68,8 @@ else:
 # The API URL is manually changed in the library to work on the testnet
 if testnet:
     client.API_URL = 'https://testnet.binance.vision/api'
+    
+   
 
 
 
