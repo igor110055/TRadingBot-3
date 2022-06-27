@@ -38,7 +38,9 @@ from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
-from binance.streams import BinanceSocketManager
+
+    
+    
 from twisted.internet import reactor
 
 # used for executing the code
@@ -163,7 +165,8 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-bsm = BinanceSocketManager(client)
+#BinanceSocketMananger = 'wss://stream.binance.us:9443' 
+bsm = 'wss://stream.binance.us:9443'(client)
 for coin in keywords:
     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 bsm.start()
@@ -228,7 +231,7 @@ def calculate_volume():
 # want to scan other websites?
 # Simply add the RSS Feed url to the Crypto feeds.csv file
 
-with open('/Crypto feeds.csv') as csv_file:
+with open('Crypto feeds.csv') as csv_file:
 
     # open the file
     csv_reader = csv.reader(csv_file)
