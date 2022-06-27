@@ -2,7 +2,7 @@
 # import for environment variables and waiting
 import os, time
 
-import pandas as pd
+#import pandas as pd
 
 
 # used to parse XML feeds
@@ -110,15 +110,15 @@ NEGATIVE_SENTIMENT_THRESHOLD = 0
 # define the minimum number of articles that need to be analysed in order
 # for the sentiment analysis to qualify for a trade signal
 # avoid using 1 as that's not representative of the overall sentiment
-MINUMUM_ARTICLES = 2
+MINUMUM_ARTICLES = 1
 
 # define how often to run the code (check for new + try to place trades)
 # in minutes
-REPEAT_EVERY = 5
+REPEAT_EVERY = 2
 
 # define how old an article can be to be included
 # in hours
-HOURS_PAST = 24
+HOURS_PAST = 2400
 
 
 ############################################
@@ -227,9 +227,8 @@ def calculate_volume():
 # load the csv file containg top 100 crypto feeds
 # want to scan other websites?
 # Simply add the RSS Feed url to the Crypto feeds.csv file
-df = pd.read_csv (r'/Crypto feeds.csv')
-print (df)
-with df as csv_file:
+
+with open('/Crypto feeds.csv') as csv_file:
 
     # open the file
     csv_reader = csv.reader(csv_file)
