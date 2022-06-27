@@ -229,7 +229,7 @@ def calculate_volume():
 # Simply add the RSS Feed url to the Crypto feeds.csv file
 df = pd.read_csv (r'/Crypto feeds.csv')
 print (df)
-with open(df) as csv_file:
+with df as csv_file:
 
     # open the file
     csv_reader = csv.reader(csv_file)
