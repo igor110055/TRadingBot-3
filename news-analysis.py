@@ -28,7 +28,7 @@ import json
 import numpy as np
 
 # nlp library to analyse sentiment
-import nltk
+#import nltk
 import pytz
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
