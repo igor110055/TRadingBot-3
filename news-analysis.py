@@ -57,8 +57,8 @@ testnet = False
 api_key_test = os.getenv('binance_api_stalkbot_testnet')
 api_secret_test = os.getenv('binance_secret_stalkbot_testnet')
 
-api_key_live = ('ffzVEDTxMhlk7S392C0BeOxuqxoPkNLyMjsfHJxIMofCyHGL89M6XswfvOVcJqWN')
-api_secret_live = ('B38oMFclk0ude0o964Z1pDCOihMPByLur6RbyOLNAluq1yBBG3byempKqvHUbiBj')
+api_key_live = os.getenv('ffzVEDTxMhlk7S392C0BeOxuqxoPkNLyMjsfHJxIMofCyHGL89M6XswfvOVcJqWN')
+api_secret_live = os.getenv('B38oMFclk0ude0o964Z1pDCOihMPByLur6RbyOLNAluq1yBBG3byempKqvHUbiBj')
 
 #Authenticate with the client
 if testnet:
