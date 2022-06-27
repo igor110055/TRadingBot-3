@@ -41,7 +41,7 @@ from binance.exceptions import BinanceAPIException, BinanceOrderException
 # used for binance websocket
 #from websocket import BinanceSocketManager
 #from binance.streams import BinanceSocketManager
-from binance import BinanceSocketManager
+from binance import AsyncClient, DepthCacheManager, BinanceSocketManager
 from twisted.internet import reactor
 
 # used for executing the code
@@ -166,7 +166,8 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-bsm = BinanceSocketManager("wss://stream.binance.us:9443", client)
+bsm = BinanceSocketManager(client)
+#wss://stream.binance.us:9443
 for coin in keywords:
     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 bsm.start()
