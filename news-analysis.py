@@ -16,6 +16,7 @@ from datetime import date, datetime, timedelta
 
 # used to grab the XML url list from a CSV file
 import csv
+from {Cryptofeeds.csv) import 
 
 # used to save and load coins_in_hand dictionary
 import json
@@ -110,7 +111,7 @@ MINUMUM_ARTICLES = 2
 
 # define how often to run the code (check for new + try to place trades)
 # in minutes
-REPEAT_EVERY = 60
+REPEAT_EVERY = 5
 
 # define how old an article can be to be included
 # in hours
