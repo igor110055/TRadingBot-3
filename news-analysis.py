@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 
 # used to grab the XML url list from a CSV file
 import csv
-from {Cryptofeeds.csv) import 
+
 
 # used to save and load coins_in_hand dictionary
 import json
