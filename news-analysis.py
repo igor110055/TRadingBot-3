@@ -4,7 +4,7 @@ import os, time
 
 #import pandas as pd
 
-from binance import BinanceSocketManager
+#from binance import BinanceSocketManager
 # used to parse XML feeds
 import xml.etree.ElementTree as ET
 
@@ -40,7 +40,7 @@ from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
 #from binance.websockets import BinanceSocketManager
-#from binance.streams import BinanceSocketManager
+from binance.websockets import BinanceSocketManager
 #from binance import BinanceSocketManager
 from twisted.internet import reactor
 
