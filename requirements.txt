@@ -1,4 +1,4 @@
-nltk==3.7 + vader_lexicon
+nltk==3.7 
 numpy==1.23
 python-binance==0.7.10
 requests==2.25.1
