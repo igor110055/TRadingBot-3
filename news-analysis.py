@@ -2,6 +2,9 @@
 # import for environment variables and waiting
 import os, time
 
+import pandas as pd
+
+
 # used to parse XML feeds
 import xml.etree.ElementTree as ET
 
