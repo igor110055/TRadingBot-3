@@ -39,7 +39,7 @@ from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
-import websockets as BinanceSocketManager
+from websocket import BinanceSocketManager
 #from binance.streams import BinanceSocketManager
 from twisted.internet import reactor
 
@@ -165,7 +165,7 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-bsm = BinanceSocketManager(client)
+bsm = BinanceSocketManager("wss://stream.binance.us:9443client")
 for coin in keywords:
     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 bsm.start()
