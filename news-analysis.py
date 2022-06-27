@@ -40,7 +40,7 @@ from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
 #from binance.websockets import BinanceSocketManager
-from binance.streams import BinanceSocketManager
+from binance import BinanceSocketManager
 #from binance import BinanceSocketManager
 from twisted.internet import reactor
 
