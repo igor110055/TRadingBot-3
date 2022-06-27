@@ -165,8 +165,8 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-#BinanceSocketMananger = 'wss://stream.binance.us:9443' 
-bsm = 'wss://stream.binance.us:9443'(client)
+BinanceSocketMananger = 'wss://stream.binance.us:9443' 
+bsm = BinanceSocketMananger(client)
 for coin in keywords:
     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 bsm.start()
