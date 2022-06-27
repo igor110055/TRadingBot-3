@@ -227,7 +227,9 @@ def calculate_volume():
 # load the csv file containg top 100 crypto feeds
 # want to scan other websites?
 # Simply add the RSS Feed url to the Crypto feeds.csv file
-with open('Crypto feeds.csv') as csv_file:
+df = pd.read_csv (r'/Crypto feeds.csv')
+print (df)
+with open(df) as csv_file:
 
     # open the file
     csv_reader = csv.reader(csv_file)
