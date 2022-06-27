@@ -232,7 +232,7 @@ def calculate_volume():
 # want to scan other websites?
 # Simply add the RSS Feed url to the Crypto feeds.csv file
 
-with open('C:\TRadingBot\Crypto feeds.csv') as csv_file:
+with open('/TRadingBot/Crypto feeds.csv') as csv_file:
 
     # open the file
     csv_reader = csv.reader(csv_file)
