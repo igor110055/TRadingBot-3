@@ -27,7 +27,7 @@ import numpy as np
 # nlp library to analyse sentiment
 import nltk
 import pytz
-from nltk.sentiment import SentimentIntensityAnalyzer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # needed for the binance API
 from binance.client import Client
