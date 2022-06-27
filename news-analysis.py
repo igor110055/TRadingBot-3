@@ -28,7 +28,8 @@ import json
 import numpy as np
 
 # nlp library to analyse sentiment
-#import nltk
+import nltk
+
 import pytz
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -38,9 +39,8 @@ from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 # used for binance websocket
-
-    
-    
+import websockets as BinanceSocketManager
+#from binance.streams import BinanceSocketManager
 from twisted.internet import reactor
 
 # used for executing the code
@@ -56,8 +56,8 @@ testnet = False
 api_key_test = os.getenv('binance_api_stalkbot_testnet')
 api_secret_test = os.getenv('binance_secret_stalkbot_testnet')
 
-api_key_live = os.getenv('ffzVEDTxMhlk7S392C0BeOxuqxoPkNLyMjsfHJxIMofCyHGL89M6XswfvOVcJqWN')
-api_secret_live = os.getenv('B38oMFclk0ude0o964Z1pDCOihMPByLur6RbyOLNAluq1yBBG3byempKqvHUbiBj')
+api_key_live = ('ffzVEDTxMhlk7S392C0BeOxuqxoPkNLyMjsfHJxIMofCyHGL89M6XswfvOVcJqWN')
+api_secret_live = ('B38oMFclk0ude0o964Z1pDCOihMPByLur6RbyOLNAluq1yBBG3byempKqvHUbiBj')
 
 #Authenticate with the client
 if testnet:
@@ -68,8 +68,6 @@ else:
 # The API URL is manually changed in the library to work on the testnet
 if testnet:
     client.API_URL = 'https://testnet.binance.vision/api'
-    
-   
 
 
 
@@ -167,8 +165,7 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-BinanceSocketMananger = 'wss://stream.binance.us:9443' 
-bsm = [BinanceSocketMananger](client)
+bsm = BinanceSocketManager(client)
 for coin in keywords:
     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 bsm.start()
