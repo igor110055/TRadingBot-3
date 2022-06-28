@@ -14,7 +14,7 @@ symbol = "DOGE/USD"
 
 
 rsi_low = 30
-volume_low = 10000
+volume_low = 5
 amount = 2.0
 
 
@@ -56,7 +56,7 @@ while True:
         print(f'Buying {symbol} at {bot.fetch_ticker(symbol)["last"]}')
         bot.create_market_buy_order(symbol, amount)
         print(f'Bought {symbol} at {bot.fetch_ticker(symbol)["last"]}')
-    elif rsi > 70 and volume > volume_low:
+    elif rsi > 45 and volume > volume_low:
         print(f'Selling {symbol} at {bot.fetch_ticker(symbol)["last"]}')
         bot.create_market_sell_order(symbol, amount)
         print(f'Sold {symbol} at {bot.fetch_ticker(symbol)["last"]}')
