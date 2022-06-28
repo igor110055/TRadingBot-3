@@ -61,7 +61,7 @@ while True:
         bot.create_market_sell_order(symbol, amount)
         print(f'Sold {symbol} at {bot.fetch_ticker(symbol)["last"]}')
     else:
-        print('Waiting for conditions to be met, sleeping for 5 secs...')
+        print('Waiting for conditions to be met, sleeping for 30 secs...')
         print('--------------------------------------------------------------')
         time.sleep(30)
 
