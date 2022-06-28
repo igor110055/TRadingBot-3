@@ -63,7 +63,7 @@ while True:
     else:
         print('Waiting for conditions to be met, sleeping for 5 secs...')
         print('--------------------------------------------------------------')
-        time.sleep(5)
+        time.sleep(30)
 
 
 #sentiment code
