@@ -4,9 +4,9 @@ import pandas_ta as ta
 import time
 bot = ccxt.ftxus({
 
-    'apiKey': 'YOUR_API_KEY',
+    'apiKey': '7SmkF9PmOfxUF-yphj9XYJqYxp-5DJLm19u0CPqt',
 
-    'secret': 'YOUR_SECRET',
+    'secret': 'y9Sd3yhKKz9F69hOAW0cKh9umAYVHsGguoMfOIHA',
 
 })
 timeframe = '1m'
@@ -91,7 +91,7 @@ while True:
 
 
 # # used to save and load coins_in_hand dictionary
-# import json
+# import jsonshan
 
 # # numpy for sums and means
 # import numpy as np
