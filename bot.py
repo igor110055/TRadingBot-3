@@ -52,7 +52,7 @@ volume = get_volume()
 while True:
     print('--------------------------------------------------------------')
     print('RSI:', rsi)
-    print('Volume:', volume)
+    #print('Volume:', volume)
     if rsi < rsi_low:
         print(f'Buying {symbol} at {bot.fetch_ticker(symbol)["last"]}')
         bot.create_market_buy_order(symbol, amount)
