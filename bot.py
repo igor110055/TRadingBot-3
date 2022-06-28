@@ -9,13 +9,13 @@ bot = ccxt.ftxus({
     'secret': 'y9Sd3yhKKz9F69hOAW0cKh9umAYVHsGguoMfOIHA',
 
 })
-timeframe = '1m'
-symbol = "BTC/USD"
+timeframe = '5m'
+symbol = "DOGE/USD"
 
 
 rsi_low = 30
 volume_low = 10000
-amount = 0.001
+amount = 2.0
 
 
 def get_rsi():
