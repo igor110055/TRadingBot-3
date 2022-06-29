@@ -9,7 +9,7 @@ class WebsocketManager:
     _CONNECT_TIMEOUT_S = 5
 
     def __init__(self):
-        #self.connect_lock = Lock()
+        self.connect_lock = Lock()
         self.ws = None
 
     def _get_url(self):

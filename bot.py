@@ -118,7 +118,7 @@ from gevent.event import Event
 # from binance.client import Client
 # from binance.enums import *
 # from binance.exceptions import BinanceAPIException, BinanceOrderException
-
+from client import FtxWebsocketClient
 # # used for binance websocket
 # #from binance.websockets import BinanceSocketManager
 # from binance import BinanceSocketManager
@@ -257,7 +257,7 @@ for coin in keywords:
 CURRENT_PRICE = {}
 
 
-def ticker_socket(msg):
+def get_markets(msg):
     '''Open a stream for financial information for CRYPTO'''
     if msg['e'] != 'error':
         global CURRENT_PRICE
@@ -274,10 +274,13 @@ def ticker_socket(msg):
 
 
  #connect to the websocket client and start the socket
+    # bsm = FtxClient(Self)
+# 
+
 bsm = FtxClient()
 for coin in keywords:
-    conn_key = bsm.get_markets(coin+PAIRING, ticker_socket)
-bsm.start()
+    conn_key = bsm.get_markets(coin+PAIRING, get_markets)
+# bsm._connect()
 
 
 '''For the amount of CRYPTO to trade in USDT'''
