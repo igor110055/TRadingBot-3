@@ -100,7 +100,7 @@ import numpy as np
 import nltk
 
 import pytz
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.sentiment import SentimentIntensityAnalyzer
 # import client
 import hmac
 import json
