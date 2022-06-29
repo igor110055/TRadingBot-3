@@ -72,6 +72,7 @@
 from importlib import import_module
 import os
 from typing_extensions import Self
+from unicodedata import name
 
 # #from binance import BinanceSocketManager
 # # used to parse XML feeds
@@ -129,6 +130,8 @@ from itertools import count
 
 # # we use it to time our parser execution speed
 from timeit import default_timer as timer
+
+from client import FtxClient
 
 # # Use testnet (change to True) or live (change to False)?
 testnet = False
@@ -264,14 +267,16 @@ def ticker_socket(msg):
 
 
 # connect to the websocket client and start the socket
-markets = requests.get('https://ftx.com/api/markets').json()
+# markets = requests.get('https://ftx.com/api/markets').json()
 # df = pd.DataFrame(markets['result'])
 # df.set_index('name', inplace = True)
 # df.T
 
-bsm = WebsocketManager()
+
+ #connect to the websocket client and start the socket
+bsm = FtxClient()
 for coin in keywords:
-    conn_key = bsm.get_markets[coin+PAIRING, ticker_socket]
+    conn_key = bsm.get_markets(coin+PAIRING, ticker_socket)
 bsm.start()
 
 
