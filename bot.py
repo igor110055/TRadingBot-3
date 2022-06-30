@@ -4,9 +4,9 @@
 # import time
 # bot = ccxt.ftxus({
 
-#     'apiKey': '7SmkF9PmOfxUF-yphj9XYJqYxp-5DJLm19u0CPqt',
+#     'apiKey': '',
 
-#     'secret': 'y9Sd3yhKKz9F69hOAW0cKh9umAYVHsGguoMfOIHA',
+#     'secret': '',
 
 # })
 # timeframe = '5m'
@@ -140,8 +140,8 @@ testnet = False
 # api_key_test = os.getenv('binance_api_stalkbot_testnet')
 # api_secret_test = os.getenv('binance_secret_stalkbot_testnet')
 
-api_key = os.getenv('7SmkF9PmOfxUF-yphj9XYJqYxp-5DJLm19u0CPqt')
-api_secret = os.getenv('y9Sd3yhKKz9F69hOAW0cKh9umAYVHsGguoMfOIHA')
+api_key = os.getenv('')
+api_secret = os.getenv('')
 
 # #Authenticate with the client
 # if testnet:
@@ -167,9 +167,9 @@ import time
 
 # bot = ccxt.ftxus({
 
-#     'apiKey': '7SmkF9PmOfxUF-yphj9XYJqYxp-5DJLm19u0CPqt',
+#     'apiKey': '',
 
-#     'secret': 'y9Sd3yhKKz9F69hOAW0cKh9umAYVHsGguoMfOIHA',
+#     'secret': '',
 
 # })
 
@@ -266,11 +266,7 @@ def get_markets(msg):
         print('error')
 
 
-# connect to the websocket client and start the socket
-# markets = requests.get('https://ftx.com/api/markets').json()
-# df = pd.DataFrame(markets['result'])
-# df.set_index('name', inplace = True)
-# df.T
+
 
 
 #  # connect to the websocket client and start the socket
@@ -279,9 +275,9 @@ def get_markets(msg):
 #     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
 # bsm.start()
 
-# bsm = WebsocketManager
+bsm = WebsocketManager._connect
 for coin in keywords:
-    conn_key = Self.markets(coin+PAIRING, get_markets )
+    conn_key = bsm.get_markets(coin+PAIRING,  )
 # bsm.start()
 
 
