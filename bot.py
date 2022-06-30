@@ -273,14 +273,16 @@ def get_markets(msg):
 # df.T
 
 
- #connect to the websocket client and start the socket
-    # bsm = FtxClient(Self)
-# 
+#  # connect to the websocket client and start the socket
+# bsm = BinanceSocketManager(client)
+# for coin in keywords:
+#     conn_key = bsm.start_symbol_ticker_socket(coin+PAIRING, ticker_socket)
+# bsm.start()
 
-bsm = FtxClient()
+# bsm = WebsocketManager
 for coin in keywords:
-    conn_key = bsm.get_markets(coin+PAIRING, get_markets)
-# bsm._connect()
+    conn_key = Self.markets(coin+PAIRING, get_markets )
+# bsm.start()
 
 
 '''For the amount of CRYPTO to trade in USDT'''
